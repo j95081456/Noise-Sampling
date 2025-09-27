@@ -13,6 +13,7 @@ figure;
 plot(t, noise);
 xlabel('Time (s)');
 ylabel('Amplitude');
+ylim([-10 10]);
 title('White Gaussian Noise');
 
 %% 3) Sample the noise (decimation)
@@ -24,6 +25,7 @@ figure;
 stem(ts, sampled_noise, 'filled');
 xlabel('Time (s)');
 ylabel('Amplitude');
+ylim([-10 10]);
 title('Sampled Noise');
 
 %% 4) Compute sampled noise power
@@ -42,6 +44,7 @@ figure;
 plot(f, 10*log10(PSD));
 xlabel('Frequency (Hz)');
 ylabel('Power (dB)');
+ylim([-150 -20]);
 title('Spectrum of Original Noise');
 grid on;
 
@@ -57,5 +60,6 @@ figure;
 plot(f_s, 10*log10(PSD_s));
 xlabel('Frequency (Hz)');
 ylabel('Power (dB)');
+ylim([-150 -20]);
 title('Spectrum of Sampled Noise');
 grid on;
